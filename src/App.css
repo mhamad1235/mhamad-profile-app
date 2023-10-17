@@ -1,25 +1,310 @@
 .App {
   text-align: center;
+  background-color: black;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color:none;
+
+  color: white;
+
+  font-family: 'Kanit', sans-serif;
+  font-size: 20px;
+  
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logo {
+  order: 1; /* This will move the logo to the right */
+  padding-left: 5.5%;
+}
+.moving-rectangle {
+  
+  width: 10px;
+  height: 10px;
+  background-color: #f85514;
+  position: relative;
+  left: 40%;
+  bottom: 80px;
+  animation: moveDown 2s linear infinite; /* Animation properties */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Keyframes for the animation */
+@keyframes moveDown {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 50px;
+  }
+  100% {
+    top: 0;
   }
 }
+.moving-rectangle2 {
+ 
+  width: 30px;
+  height: 30px;
+  background-color:yellow ;
+  position: relative;
+  left: 60%;
+bottom: 100px;
+  animation: moveDown2 2s linear infinite; /* Animation properties */
+}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Keyframes for the animation */
+@keyframes moveDown2 {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+.flex-container {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between; 
+}
+.flex-container2{
+  display: flex;
+ 
+}
+/* Left div for text */
+.text-container {
+   width: 600px;
+  padding-left: 100px;
+  background-color: none;
+  font-family: 'Kanit', sans-serif;
+  font-size: 40px;
+  text-align: left;
+}
+
+
+@media screen and (max-width: 768px) {
+  .App {
+    text-align: center;
+    background-color: black;
+    width: 100%;
+  }
+  
+  
+  .image-container{
+    display: none;
+  }
+  
+  .flex-container2 .button-container {
+  width: 150px;
+  font-size: 10px;
+  padding-right: 10%;
+  font-weight: bold;
+  margin: 0;
+  padding: 10px;
+ 
+  }
+  .text-container{
+    position: relative;
+    margin: 3px;
+    padding: 0;
+    
+    height: 100vh;
+    font-size: 25px;
+  }
+  .text-container .smalltext{
+    font-size: 10px;
+  }
+  .moving-rectangle2 {
+ 
+    width: 10px;
+    height: 10px;
+    background-color:yellow ;
+    position: relative;
+    left: 90%;
+  bottom: 50px;
+    animation: moveDown2 2s linear infinite; /* Animation properties */
+  }
+ 
+  .moving-rectangle {
+  
+    width: 10px;
+    height: 10px;
+    background-color: #f85514;
+    position: relative;
+    left: 60%;
+ 
+    animation: moveDown 2s linear infinite; /* Animation properties */
+  }
+ .logo .App-logo{
+    width: 100px; /* Set the desired width */
+    height: 80px;
+    cursor: pointer;
+    position: relative;
+   
+    right: 20px;
+  }
+   .menu a{
+    font-size: 15px;
+    position: relative;
+    top: 10px;
+    left: 20%;
+  }
+}
+.smalltext{
+  color: yellow;
+  font-size: 20px;
+  letter-spacing: 3px;  
+
+}
+/* Right div for image */
+.image-container {
+  flex-shrink: 0; /* Do not shrink in size */
+  background-color: none;
+  padding-left: 150px;
+  position: relative;
+  bottom: 100px;
+}
+
+/* Image styles */
+.image-container img {
+  max-width: 100%;
+  height: 80vh;
+}
+.menu {
+  padding-right: 15%;
+  padding-bottom: 50px;
+  letter-spacing: 2px;
+  order: 2; /* This will move the menu items to the left */
+}
+
+/* Style for menu items */
+.menu a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+
+}
+.App-logo {
+ 
+  width: 165px; /* Set the desired width */
+  height: 130px;
+  cursor: pointer;
+
+}
+
+
+
+
+.academic-description {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  font-size: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Kanit', sans-serif;
+}
+
+.skills-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Kanit', sans-serif;
+}
+
+.skills-container h2 {
+  color: #333;
+  font-family: 'Kanit', sans-serif;
+}
+
+.image-containernew {
+  max-width: 800px;
+  margin: 50px auto;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+}
+
+.image-containernew h2 {
+  color: #333;
+  text-align: center;
+  padding: 20px;
+}
+
+.footer {
+  background-color: #000;
+  color: #fff;
+  height: 30vh;
+  display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.social-icons {
+  display: flex;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #fff;
+}
+.img-foot{
+width: 100px;
+  position: absolute;
+left: 0;
+margin-left: 5%;
+
+}
+.social-icons img {
+  width: 50px;
+  height: 50px;
+}
+.image-overlay {
+  position: relative;
+}
+
+.img1 {
+  width: 50%;
+  height: auto;
+  display: flex;
+}
+.img2 {
+  width: 50%;
+  height: auto;
+  display: flex;
+  padding-left: 45%;
+  padding-top: 10%;
+}
+
+.img1:first-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.skill-category {
+  margin-bottom: 20px;
+  font-family: 'Kanit', sans-serif;
+}
+
+.academic-description h2 {
+  color: #333;
+}
+
+.academic-description p {
+  color: #555;
+  line-height: 1.6;
+}
+.App-header {
+  background-color:black;
+  min-height: auto;
+  display: flex;
+  flex-direction: column;
   font-size: calc(10px + 2vmin);
   color: white;
 }
@@ -27,7 +312,89 @@
 .App-link {
   color: #61dafb;
 }
+.button-container {
+  font-family: 'Kanit', sans-serif;
+  display: flex;
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  padding: 10px 20px;
+  background-color: #1ED760; /* Button background color */
+  color: #fff; /* Text color */
+  border: none;
+  border-radius: 500px;
+  cursor: pointer;
+  font-size: 22px;
+  width: 400px;
+  letter-spacing: 2px;  
+}
 
+/* Styling for the icon */
+.button-icon {
+  margin-right: 10px; /* Add spacing between icon and text */
+}
+.btn1{
+  font-family: 'Kanit', sans-serif;
+  
+
+  cursor: pointer;
+  font-size: 16px;
+ 
+  border-radius: 500px;
+  transition-property: background-color,border-color,color,box-shadow,filter;
+  transition-duration: .3s;
+  border: 1px solid transparent;
+  letter-spacing: 2px;
+   width: 500px;
+  
+
+ margin-right: 5%;
+  font-weight: 700;
+
+  color: #fff;
+  background-color: #1ED760;
+  height: 70px;
+ 
+
+}
+.btn2{
+  font-family: 'Kanit', sans-serif;
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  font-size: 15px;
+margin-left: 20px;
+ 
+  transition-property: background-color,border-color,color,box-shadow,filter;
+  transition-duration: .3s;
+  width: 200px;
+  text-transform: uppercase;
+  white-space: normal;
+  font-weight: 700;
+  text-align: center;
+  border-radius: 500px;
+  color:rgb(255, 255, 255);
+  background:none;
+  height: 58px;
+ border: none;
+
+}
+.btn2:hover{
+ 
+ 
+ border:1px solid white;
+ 
+
+}
+.whastup{
+  position: relative;
+  top: 5px;
+  right: 20px;
+}
+.btn1:hover{
+  
+ 
+  border: 1px solid white;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -36,3 +403,132 @@
     transform: rotate(360deg);
   }
 }
+.skill-display-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.skill-table {
+  width: 70%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.skill-row {
+  display: flex;
+  border-bottom: 1px solid #ddd;
+}
+
+.skill-cell {
+  flex: 1;
+  padding: 10px;
+}
+
+.skill-header {
+  font-weight: bold;
+  background-color: #3498db;
+  color: #fff;
+}
+.footer-dark {
+  text-align: center;
+  padding:50px 50px;
+  color:#f0f9ff;
+  background-color:#282d32;
+  font-family: 'Kanit', sans-serif;
+ 
+}
+
+.footer-dark h3 {
+  font-size: 45px;
+  margin-top:0;
+  margin-bottom:12px;
+ 
+  font-size:16px;
+}
+
+.footer-dark ul {
+
+  font-size: 45px;
+  padding:0;
+  list-style:none;
+  line-height:1.6;
+  font-size:14px;
+  margin-bottom:0;
+}
+
+.footer-dark ul a {
+  color:inherit;
+  font-size: 45px;
+  text-decoration:none;
+  opacity:0.6;
+  
+}
+
+.footer-dark ul a:hover {
+  opacity:0.8;
+}
+
+@media (max-width:767px) {
+  .footer-dark .item:not(.social) {
+    text-align:center;
+    padding-bottom:20px;
+  }
+}
+
+.footer-dark .item.text {
+  margin-bottom:36px;
+
+}
+
+@media (max-width:767px) {
+  .footer-dark .item.text {
+    margin-bottom:0;
+  }
+}
+
+.footer-dark .item.text p {
+  opacity:0.6;
+  margin-bottom:0;
+}
+
+.footer-dark .item.social {
+  text-align:center;
+}
+
+@media (max-width:991px) {
+  .footer-dark .item.social {
+    text-align:center;
+    margin-top:20px;
+  }
+}
+
+.footer-dark .item.social > a {
+  font-size:20px;
+  width:36px;
+  height:36px;
+  line-height:36px;
+  display:inline-block;
+  text-align:center;
+ 
+
+  margin:0 8px;
+  color:#fff;
+  opacity:0.75;
+}
+
+.footer-dark .item.social > a:hover {
+  opacity:0.9;
+}
+
+.footer-dark .copyright {
+  text-align:center;
+  padding-top:24px;
+  opacity:0.3;
+  font-size:13px;
+  margin-bottom:0;
+}
+
